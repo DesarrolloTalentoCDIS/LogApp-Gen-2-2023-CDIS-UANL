@@ -1,1 +1,0 @@
-Archivo solo de prueba para que git tome en cuenta la carpeta en mi commit.
