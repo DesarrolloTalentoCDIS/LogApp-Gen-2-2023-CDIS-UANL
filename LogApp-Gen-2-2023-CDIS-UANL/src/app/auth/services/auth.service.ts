@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { enviroments } from 'src/enviroments/enviroments';
 import { user } from '../interfaces/us-interfaces';
 import { HttpClient } from '@angular/common/http';
+import { enviroment } from 'src/enviroments/enviroment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private baseUrl: string = enviroments.baseUrl;
+  private baseUrl: string = enviroment.baseUrl;
   private _user!: user;
 
   get user(){
@@ -30,6 +30,5 @@ export class AuthService {
   }
 
   ValidateToken(){
-    
   }
 }
