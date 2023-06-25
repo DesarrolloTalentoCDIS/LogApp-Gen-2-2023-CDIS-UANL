@@ -1,1 +1,33 @@
-<p>login works!</p>
+<!-- partial:index.partial.html -->
+
+<div class="logo text-center">
+    <h1>Logo</h1>
+</div>
+
+<form [formGroup]="formularioLog" (ngSubmit)="login()">
+
+  <div class="wrapper">
+
+    <div class="inner-warpper text-center">
+
+      <h2 class="title">Login to your account</h2>
+
+      <div class="input-group">
+        <input class="form-control" placeholder="ID" formControlName="id" required/>
+      </div>
+
+      <div class="input-group">
+        <input class="form-control" placeholder="Password" type="password" formControlName="pass" required/>
+      </div>
+  
+      <button class="input-group" type="submit" [disabled]="formularioLog.invalid">Login</button>
+      
+      <button class="red-button" routerLink="/auth/register">Registrarme</button>
+
+    </div>
+
+  </div>
+
+</form>
+
+  <!-- partial -->
