@@ -1,1 +1,17 @@
-<p>login works!</p>
+<section class='login' id='login'>
+    <div class='head'>
+        <h1 class='company'>Login</h1>
+    </div>
+    <p class='msg'>¡Bienvenido!</p>
+    <div class='form'>
+        <form [formGroup]="formularioLog" (ngSubmit)="login()">
+            <input type= 'text' placeholder='ID' class='text' formControlName= "id" required><br>
+            <input type="password" placeholder='Contraseña' class='password' formControlName="pass" required><br>
+            <div class="btns">
+                <button class="btn-login" type="submit" [disabled] = "formularioLog.invalid">Log in</button>
+                <button class="btn-register" routerLink="/auth/register">Regístrate</button>
+            </div>
+        </form>
+    </div>
+</section>
+

@@ -73,6 +73,24 @@ body {
     color: dimgray;
     transition: 0.5s;
   }
+  .login .form .btn-register {
+    background: none;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 0px 2px white;
+    border-radius: 3px;
+    padding: 5px 2em;
+    transition: 0.5s;
+  }
+  .login .form .btn-register:hover {
+    background: white;
+    color: dimgray;
+    transition: 0.5s;
+  }
+  .login .form .btns{ 
+    display: flex;
+    justify-content: space-between;
+  }
   .login .forgot {
     text-decoration: none;
     color: white;
