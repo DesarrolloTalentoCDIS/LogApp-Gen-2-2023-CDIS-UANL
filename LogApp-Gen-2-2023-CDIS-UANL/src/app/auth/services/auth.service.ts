@@ -26,6 +26,7 @@ export class AuthService {
   login(Usname: string, pass: string){
     const URL= `${this.baseUrl}/auth`;
     const body= {Usname, pass};
+   
 
   }
 
