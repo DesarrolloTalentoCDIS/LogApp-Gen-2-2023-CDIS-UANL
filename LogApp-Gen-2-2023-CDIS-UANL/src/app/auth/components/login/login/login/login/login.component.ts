@@ -31,7 +31,18 @@ export class LoginComponent {
     if(this.formularioLog.valid){
 
       const {id, pass} = this.formularioLog.value;
-      this.router.navigateByUrl('/dashboard');
+      this.authService.login(id,pass)
+      .subscribe(res =>{
+        if (res === true){
+          this.router.navigateByUrl('/dashboard');
+          this.toastr.success(id,'Ingreso correcto')
+        } else {
+          this.toastr.error(res, 'Error', {
+            timeOut:  4000,
+            progressAnimation: 'increasing'
+          })
+        }
+      })
 
     } else {
       this.toastr.error("Verifique sus datos", "Error");
