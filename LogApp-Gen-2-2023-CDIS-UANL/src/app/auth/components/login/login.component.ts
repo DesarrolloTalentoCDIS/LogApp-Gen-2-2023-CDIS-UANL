@@ -36,7 +36,21 @@ export class LoginComponent  implements OnInit{
 
     if(this.formularioLog.valid){
         const {id, pass}= this.formularioLog.value
-        this.router.navigateByUrl("/dashboard");
+        console.log(id)
+        console.log(pass)
+        this.authService.login(id, pass).subscribe(res =>{
+          if(res === true){
+            this.router.navigateByUrl("/dashboard");
+            this.toastr.success(id,'Ingreso correctamente');
+          }else{
+            console.log(this.formularioLog.value)
+            console.log(res);
+            this.toastr.error(res,'Error',{
+              timeOut: 400,
+              progressAnimation: 'increasing'
+            })
+          }
+        })
     }else{
       this.toastr.error('Verifique sus datos', 'Error');
       

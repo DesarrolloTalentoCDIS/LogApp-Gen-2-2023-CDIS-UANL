@@ -7,3 +7,4 @@ export interface AuthResponse{
     usname?: string,
     ok: boolean
 }
+
