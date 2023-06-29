@@ -1,1 +1,37 @@
-<p>register works!</p>
+<!-- partial:index.partial.html -->
+
+<div class="logo text-center">
+    <h1>Logo</h1>
+</div>
+
+<form [formGroup]="formularioRegister" (ngSubmit)="register()">
+
+  <div class="wrapper">
+
+    <div class="inner-warpper text-center">
+
+      <h2 class="title">Register your account</h2>
+
+      <div class="input-group">
+        <input class="form-control" placeholder="Username" formControlName="usname" required/>
+      </div>
+
+      <div class="input-group">
+        <input class="form-control" placeholder="ID" formControlName="id" required/>
+      </div>
+
+      <div class="input-group">
+        <input class="form-control" placeholder="Password" type="password" formControlName="pass" required/>
+      </div>
+  
+      <button class="input-group" type="submit">Register</button>
+      
+      <button class="red-button" routerLink="/auth/login">Login</button>
+
+    </div>
+
+  </div>
+
+</form>
+
+  <!-- partial -->

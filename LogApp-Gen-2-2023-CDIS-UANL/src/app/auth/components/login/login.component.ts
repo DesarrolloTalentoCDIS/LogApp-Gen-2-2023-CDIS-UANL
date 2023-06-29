@@ -40,9 +40,9 @@ export class LoginComponent{
         this.toastr.error(res, 'Error', {
           timeOut: 4000,
           progressAnimation: 'increasing'
-        })
+        });
       }
-    })
+    });
    } else {
     this.toastr.error('Verifique sus datos', 'Error');
    }
