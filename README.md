@@ -1,27 +1,29 @@
-# LogApp
+# Log App - README
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+## IMPORTANTE :red_circle:
 
-## Development server
+Este proyecto es parte de un curso sobre Angular y su metodología de entregas. Si tienes dudas sobre Angular o el proceso de entrega, por favor, consulta con el instructor o compañeros de equipo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+La puntuación de este curso se divide de la siguiente manera:
 
-## Code scaffolding
+- 50% Examen: Evaluación realizada hace 1 semana.
+- 50% Práctico: Proyecto actual "Log App Gen 2".
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Actualmente existen 2 formas de cumplir con el 50% práctico:
 
-## Build
+1. Apoyar con 2 actividades en Trello.
+2. Crear el proyecto completo.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+El objetivo del curso es participar en equipo y adquirir la habilidad de crear una aplicación Angular. La asistencia a las sesiones o la revisión de las grabaciones cubre esta última parte.
 
-## Running unit tests
+### Opción 1: Apoyar con 2 actividades en Trello
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Para aquellos que elijan esta opción, se ha fusionado todo el proyecto en una única rama llamada "main". Por favor, suban sus cambios a esta rama.
 
-## Running end-to-end tests
+### Opción 2: Continuar el proyecto de forma independiente
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Para aquellos que hayan continuado la aplicación por su cuenta, pueden seguir trabajando de esta manera, ya sea utilizando una rama separada o un repositorio diferente. Sin embargo, es importante no registrar los movimientos en Trello a partir de hoy. Al final, revisaré sus ramas o repositorios para asignar los puntos correspondientes.
 
-## Further help
+Si tienes alguna pregunta o necesitas aclaraciones adicionales, no dudes en comunicarte con el instructor o tus compañeros de equipo.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Buena suerte con el proyecto! :rocket:
