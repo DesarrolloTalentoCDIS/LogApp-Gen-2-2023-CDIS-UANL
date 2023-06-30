@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { ToastrService } from 'ngx-toastr';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -10,19 +10,16 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent{
-
   formularioRegister: FormGroup = this.fb.group({
     usname: ['', [Validators.required, Validators.minLength(6)]],
     id: ['', [Validators.required, Validators.minLength(8)]],
     pass: ['', [Validators.required, Validators.minLength(7)]]
   });
-
   constructor(private fb: FormBuilder,
     private router: Router,
     private authService : AuthService,
     private toastr : ToastrService
     ){}
-
     register(){
       const {usname, id, pass}= this.formularioRegister.value;
       this.authService.register(usname,id,pass)
@@ -37,6 +34,6 @@ export class RegisterComponent{
           })
         }
       })
-
     }
 }
+
