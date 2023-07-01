@@ -23,7 +23,7 @@ constructor(private authservice: AuthService,
   }
 
   canLoad(): Observable<boolean> | boolean {
-    return this.authservice.ValidateToken.pipe(
+    return this.authservice.ValidateToken().pipe(
       tap(valid =>{
         if(!valid){
           this.router.navigateByUrl('/auth')
