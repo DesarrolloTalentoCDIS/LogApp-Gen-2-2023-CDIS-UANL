@@ -29,7 +29,7 @@ constructor(private authservice: AuthService,
           this.router.navigateByUrl('/auth')
         }
       })
-    )
+    );
   }
   
 }

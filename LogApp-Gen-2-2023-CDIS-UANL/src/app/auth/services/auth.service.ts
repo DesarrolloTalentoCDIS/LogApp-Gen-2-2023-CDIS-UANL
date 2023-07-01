@@ -59,7 +59,7 @@ export class AuthService {
   }
 
   ValidateToken(): Observable<boolean> {
-    const URL= `${this.baseUrl}/auth/renew`;
+    const URL= `${this.baseUrl}/auth/api/renew`;
     const headers= new HttpHeaders().set('apikey', localStorage.getItem('token') || '');
 
     return this.http.get<AuthResponse>(URL, {headers}).pipe(
