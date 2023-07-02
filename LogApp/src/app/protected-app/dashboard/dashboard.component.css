@@ -1,0 +1,17 @@
+#bg_dashboard {
+    background-image: url('../../../img/background.jpg');
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1; 
+}
+
+p {
+    color: #ffffff; 
+    font-weight: bold;
+    font-size: 28px;
+}
