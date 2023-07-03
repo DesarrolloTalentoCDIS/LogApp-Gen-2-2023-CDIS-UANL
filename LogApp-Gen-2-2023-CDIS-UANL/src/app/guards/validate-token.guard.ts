@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanLoad, CanActivate , RouterStateSnapshot, UrlTree, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 import { AuthService } from '../auth/services/auth.service';
 
 @Injectable({
@@ -12,7 +12,7 @@ export class ValidateTokenGuard implements CanActivate, CanLoad {
     private router: Router){ }
 
   canActivate(): Observable<boolean> | boolean {
-    return this.authService.validateToken();
+    return this.authService.validateToken()
     .pipe(
       tap(valid => {
         if(!valid){
@@ -22,8 +22,15 @@ export class ValidateTokenGuard implements CanActivate, CanLoad {
     )
   }
 
-  canLoad(){
-
+  canLoad(): Observable<boolean> | boolean{
+    return this.authService.validateToken()
+    .pipe(
+      tap(valid => {
+        if(!valid){
+          this.router.navigateByUrl('/auth')
+        }
+      } )
+    )
   }
 
 

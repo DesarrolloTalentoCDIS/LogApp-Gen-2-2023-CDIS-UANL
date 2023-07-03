@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { enviroment } from 'src/enviroments/enviroment';
 import { user } from '../interfaces/us-interface';
 import { AuthResponse } from '../interfaces/res-interface';
-import { catchError, map, of, tap } from 'rxjs';
+import { Observable, catchError, map, of, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -63,7 +63,25 @@ export class AuthService {
     )
   }
   
-  validateToken(){
+  validateToken(): Observable<boolean>{
+    const url = `${this.baseUrl}/auth/renew`;
+    const headers = new HttpHeaders()
+    .set('apikey', localStorage.getItem('token') || '');
+    
+    return this.http.get<AuthResponse>(url, {headers})
+    .pipe(
+      map(res => {
+        localStorage.setItem('token', res.token!);
+        this._user = {
+          id: res.id!,
+            usname: res.usname!
+        }
+        return res.ok;
+      }),
+      catchError(err => of(false))
+    )
+
 
   }
+
 }
