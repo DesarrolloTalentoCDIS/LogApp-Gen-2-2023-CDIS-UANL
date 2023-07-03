@@ -22,7 +22,8 @@ export class AuthService {
   register(Usname: string, id: string, pass: string){
     const URL= `${this.baseUrl}/auth/new`;
     const body= {Usname, id, pass}; 
-
+    
+   
     return this.http.post<AuthResponse>(URL, body).pipe(
       tap(res =>{
         if(res.ok){

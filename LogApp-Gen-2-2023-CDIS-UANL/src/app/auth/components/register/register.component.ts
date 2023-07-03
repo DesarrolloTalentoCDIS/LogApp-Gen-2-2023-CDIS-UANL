@@ -27,6 +27,7 @@ export class RegisterComponent {
       register(){
         const{usname, id, pass}= this.formularioRegister.value
         this.authservices.register(usname, id, pass).subscribe(res =>{
+          console.log(res);
           if(res === true){
             this.router.navigateByUrl("/dashboard")
             this.toastr.success(id+""+usname, "Registro correcto")
