@@ -17,4 +17,9 @@ export class DashboardComponent {
   get usuario(){
     return this.authService.user;
   }
+
+  logOut(){
+    this.router.navigateByUrl('/auth');
+    this.authService.logOut();
+  }
 }
